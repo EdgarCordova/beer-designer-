@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NothingButBeer", "NothingButBeer\NothingButBeer.csproj", "{C8546761-5D5F-478B-9149-8C3F98353168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NothingButBeer.Tests", "NothingButBeer.Tests\NothingButBeer.Tests.csproj", "{B42098DF-D1D0-42E2-9315-5710F213399F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C8546761-5D5F-478B-9149-8C3F98353168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8546761-5D5F-478B-9149-8C3F98353168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8546761-5D5F-478B-9149-8C3F98353168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8546761-5D5F-478B-9149-8C3F98353168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B42098DF-D1D0-42E2-9315-5710F213399F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B42098DF-D1D0-42E2-9315-5710F213399F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B42098DF-D1D0-42E2-9315-5710F213399F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B42098DF-D1D0-42E2-9315-5710F213399F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
