@@ -1,0 +1,5 @@
+C:\www\shipcompliant\NothingButBeer\DBUtility\bin\Debug\DBUtility.dll
+C:\www\shipcompliant\NothingButBeer\DBUtility\bin\Debug\DBUtility.pdb
+C:\www\shipcompliant\NothingButBeer\DBUtility\obj\Debug\DBUtility.csprojResolveAssemblyReference.cache
+C:\www\shipcompliant\NothingButBeer\DBUtility\obj\Debug\DBUtility.dll
+C:\www\shipcompliant\NothingButBeer\DBUtility\obj\Debug\DBUtility.pdb
