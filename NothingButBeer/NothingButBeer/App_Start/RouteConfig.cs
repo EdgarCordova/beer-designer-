@@ -18,6 +18,12 @@ namespace NothingButBeer
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "Recipe",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Recipe", action = "Index", id = UrlParameter.Optional }
+            );
         }
     }
 }

@@ -1,0 +1,37 @@
+﻿@using BusinessEntities
+@model Recipe
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="container" style=" background-color: rgba(34,34,34,0.9); margin-top: 150px; padding: 50px;">
+    <div class="content">
+        @using (Html.BeginForm("Create", "Recipe", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+            <fieldset>
+
+                <div class="form-group">
+                    <label class="control-label" for="Title"><h2>Name</h2></label>
+                    <div class="controls">
+                        @Html.TextBoxFor(model => model.Title, new { @class = "form-control", @required = "required" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="RecipeDescription"><h2>Beer Description</h2></label>
+                    <div class="controls">
+                        @Html.TextAreaFor(model => model.RecipeDescription, new { @class = "form-control", @required = "required", @type = "text", value = "0" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!-- Button -->
+                    <div class="controls">
+                        <button type="submit" class="btn btn-primary">Create Recipe</button>
+                    </div>
+                </div>
+            </fieldset>
+        }
+    </div>
+</div>
+

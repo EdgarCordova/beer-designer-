@@ -1,0 +1,27 @@
+﻿@using BusinessEntities
+@model Recipe
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container" style=" background-color: rgba(34,34,34,0.9); margin-top: 150px; padding: 50px;">
+    <div class="content">
+        <div class="row">
+            <h1 style="text-align:center">@Model.Title</h1>
+            <hr />
+            <br />
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <img style="width:100%" src="http://www.pinckneypubandgrill.com/wp-content/uploads/2013/02/Beer-Slide-Background.jpg" />
+                <h1 style="text-align:center">Ingredents</h1>
+                <hr />
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <h4>@Model.RecipeDescription</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
