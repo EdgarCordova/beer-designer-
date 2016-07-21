@@ -6,6 +6,8 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using NothingButBeer;
 using NothingButBeer.Controllers;
+using NothingButBeer.Models;
+using DataAccess;
 
 namespace NothingButBeer.Tests.Controllers
 {
@@ -50,5 +52,7 @@ namespace NothingButBeer.Tests.Controllers
             // Assert
             Assert.IsNotNull(result);
         }
+
+     
     }
 }

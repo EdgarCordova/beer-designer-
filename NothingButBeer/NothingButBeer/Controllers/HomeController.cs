@@ -39,7 +39,7 @@ namespace NothingButBeer.Controllers
                                 Recipe recipe = new Recipe();
                                 recipe.Id = Convert.ToInt32(reader["Id"]);
                                 recipe.Title = reader["Title"].ToString();
-                                recipe.Description = reader["Description"].ToString();
+                                recipe.RecipeDescription = reader["Description"].ToString();
                                 recipes.Add(recipe);           
                             }
                         }

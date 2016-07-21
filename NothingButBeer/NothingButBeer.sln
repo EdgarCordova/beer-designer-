@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NothingButBeer", "NothingBu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NothingButBeer.Tests", "NothingButBeer.Tests\NothingButBeer.Tests.csproj", "{B42098DF-D1D0-42E2-9315-5710F213399F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "DataAccess\DataAccess.csproj", "{15D64DCF-CC8A-4ECE-B087-BEB0D0A7E9B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B42098DF-D1D0-42E2-9315-5710F213399F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B42098DF-D1D0-42E2-9315-5710F213399F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B42098DF-D1D0-42E2-9315-5710F213399F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15D64DCF-CC8A-4ECE-B087-BEB0D0A7E9B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15D64DCF-CC8A-4ECE-B087-BEB0D0A7E9B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15D64DCF-CC8A-4ECE-B087-BEB0D0A7E9B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15D64DCF-CC8A-4ECE-B087-BEB0D0A7E9B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
