@@ -1,0 +1,1 @@
+﻿var NothingButBeerApp = angular.module('NothingButBeerApp', []);

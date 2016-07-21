@@ -3,13 +3,15 @@
     ViewBag.Title = "Recipes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="content recipeWrapper">
-    <div class="form-group" style="display:inline;">
-        <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search ">
-            <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
-        </div>
+<div class="content recipeWrapper" ng-controller="BlogAddCtrl">
+    <div class=" form-group" style="display:inline;">
+
+        {{data}}
+    <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search ">
+        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
     </div>
+</div>
 
 </div>
 
@@ -21,3 +23,20 @@
 }
 
 </style>
+
+
+<script>
+    NothingButBeerApp.factory('blogaddfactory', function ($http) {
+        return {
+            getKey: function () {
+                return "52855327-D1DC-4D";
+            },
+        }
+    });
+
+    angular.module('NothingButBeerApp', []).controller('BlogAddCtrl', function ($scope) {
+            $scope.data = "hello";
+        });
+
+
+</script>

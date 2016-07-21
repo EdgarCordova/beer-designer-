@@ -167,6 +167,7 @@
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Scripts\main.js" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -178,6 +179,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\beerbackground.jpg" />
     <Content Include="Images\NothingButBeerLogo.png" />
+    <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
