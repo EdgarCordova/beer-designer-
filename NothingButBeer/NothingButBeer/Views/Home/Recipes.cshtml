@@ -3,18 +3,21 @@
     ViewBag.Title = "Recipes";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="content recipeWrapper" ng-controller="BlogAddCtrl">
-    <div class=" form-group" style="display:inline;">
-
-        {{data}}
-    <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search ">
-        <span class="input-group-addon"><span class="glyphicon glyphicon-search"></span></span>
+<div ng-controller="BlogAddCtrl">
+    <div class="content recipeWrapper">
+        <div class=" form-group" style="display:inline;">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search " ng-keyup="$event.keyCode == 13 && search($event)" ng-model="filter.keyword">
+                <span class="input-group-addon"><span ng-click="search($event)" class="glyphicon glyphicon-search"></span></span>
+            </div>
+        </div>
     </div>
-</div>
+    
+    <div ng-include="filter.url">
 
+    </div>
+    
 </div>
-
 <style>
     .recipeWrapper {
     background-color :rgba(34,34,34,0.9); 
@@ -35,8 +38,18 @@
     });
 
     angular.module('NothingButBeerApp', []).controller('BlogAddCtrl', function ($scope) {
-            $scope.data = "hello";
-        });
+
+        $scope.filter = {
+            keyword: "",
+            url: "/Home/RecipeSearchGrid?keyword="
+        }
+
+        $scope.search = function (e) {
+            $scope.filter.url = "/Home/RecipeSearchGrid?keyword=" + $scope.filter.keyword + "&r=" + new Date().getTime();
+        }
+
+
+    });
 
 
 </script>

@@ -42,3 +42,5 @@ C:\www\shipcompliant\NothingButBeer\NothingButBeer.Tests\obj\Debug\NothingButBee
 C:\www\shipcompliant\NothingButBeer\NothingButBeer.Tests\obj\Debug\NothingButBeer.Tests.pdb
 C:\www\shipcompliant\NothingButBeer\NothingButBeer.Tests\bin\Debug\DataAccess.dll
 C:\www\shipcompliant\NothingButBeer\NothingButBeer.Tests\bin\Debug\DataAccess.pdb
+C:\www\shipcompliant\NothingButBeer\NothingButBeer.Tests\bin\Debug\BusinessEntities.dll
+C:\www\shipcompliant\NothingButBeer\NothingButBeer.Tests\bin\Debug\BusinessEntities.pdb

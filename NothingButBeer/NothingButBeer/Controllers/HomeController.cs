@@ -1,8 +1,11 @@
-﻿using NothingButBeer.Models;
+﻿using BusinessEntities;
+using DataAccess;
+using NothingButBeer.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -11,45 +14,18 @@ namespace NothingButBeer.Controllers
     public class HomeController : Controller
     {
 
-        private static string _connect = "Data Source=EDGARPC;Initial Catalog=ShipCompliant;Integrated Security=True";
-
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult GetRecipes()
+        public async Task<ActionResult> RecipeSearchGrid()
         {
+            string keyword = string.IsNullOrEmpty(Request.QueryString["keyword"]) ? string.Empty : Request.QueryString["keyword"];
 
-            List<Recipe> recipes = new List<Recipe>();
+            List<Recipe> recipes = RecipeRepository.GetBeerRecipesByTitle(keyword);
 
-            using (SqlConnection con = new SqlConnection(_connect))
-            {
-
-                con.Open();
-
-                using (SqlCommand cmd = new SqlCommand("SELECT * FROM Recipes", con))
-                {
-                    using (SqlDataReader reader = cmd.ExecuteReader())
-                    {
-                        if (reader != null)
-                        {
-                            while (reader.Read())
-                            {
-                                Recipe recipe = new Recipe();
-                                recipe.Id = Convert.ToInt32(reader["Id"]);
-                                recipe.Title = reader["Title"].ToString();
-                                recipe.RecipeDescription = reader["Description"].ToString();
-                                recipes.Add(recipe);           
-                            }
-                        }
-                    } // reader closed and disposed up here
-
-                } // command disposed here
-
-            } 
-            return View();
-
+            return PartialView("/Views/Home/_RecipeSearchGrid.cshtml", recipes);
         }
 
         public ActionResult Recipes()

@@ -93,6 +93,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessEntities\BusinessEntities.csproj">
+      <Project>{0212fc32-6260-4c1b-93b4-ecf41991e653}</Project>
+      <Name>BusinessEntities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DataAccess\DataAccess.csproj">
       <Project>{15d64dcf-cc8a-4ece-b087-beb0d0a7e9b6}</Project>
       <Name>DataAccess</Name>

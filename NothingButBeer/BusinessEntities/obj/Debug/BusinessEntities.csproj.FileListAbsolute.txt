@@ -1,0 +1,5 @@
+C:\www\shipcompliant\NothingButBeer\BusinessEntities\bin\Debug\BusinessEntities.dll
+C:\www\shipcompliant\NothingButBeer\BusinessEntities\bin\Debug\BusinessEntities.pdb
+C:\www\shipcompliant\NothingButBeer\BusinessEntities\obj\Debug\BusinessEntities.csprojResolveAssemblyReference.cache
+C:\www\shipcompliant\NothingButBeer\BusinessEntities\obj\Debug\BusinessEntities.dll
+C:\www\shipcompliant\NothingButBeer\BusinessEntities\obj\Debug\BusinessEntities.pdb

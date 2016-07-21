@@ -53,3 +53,7 @@ C:\www\shipcompliant\NothingButBeer\NothingButBeer\bin\Microsoft.Owin.Security.M
 C:\www\shipcompliant\NothingButBeer\NothingButBeer\obj\Debug\NothingButBeer.csprojResolveAssemblyReference.cache
 C:\www\shipcompliant\NothingButBeer\NothingButBeer\obj\Debug\NothingButBeer.dll
 C:\www\shipcompliant\NothingButBeer\NothingButBeer\obj\Debug\NothingButBeer.pdb
+C:\www\shipcompliant\NothingButBeer\NothingButBeer\bin\BusinessEntities.dll
+C:\www\shipcompliant\NothingButBeer\NothingButBeer\bin\DataAccess.dll
+C:\www\shipcompliant\NothingButBeer\NothingButBeer\bin\BusinessEntities.pdb
+C:\www\shipcompliant\NothingButBeer\NothingButBeer\bin\DataAccess.pdb

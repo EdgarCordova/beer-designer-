@@ -1,4 +1,4 @@
-﻿using NothingButBeer.Models;
+﻿using BusinessEntities;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -11,7 +11,7 @@ namespace DataAccess
 {
     public class RecipeRepository
     {
-        private static string _connect = "Data Source=EDGARPC;Initial Catalog=ShipCompliant;Integrated Security=True";
+        private static string _connect = "Data Source=EDGARPC;Initial Catalog=ShipCompliant;Integrated Security=True;User ID=test;pwd=test";
 
         public static List<Recipe> GetAllBeerRecipes()
         {

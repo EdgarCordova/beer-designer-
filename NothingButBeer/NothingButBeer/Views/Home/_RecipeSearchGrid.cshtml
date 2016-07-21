@@ -1,0 +1,45 @@
+﻿@using BusinessEntities
+@model List<Recipe>
+
+
+@{
+    ViewBag.Title = "_RecipeSearchGrid";
+}
+
+
+    @foreach (Recipe item in Model)
+    {
+        <div class="content" style="min-height:450px; padding: 70px; background-color :rgba(34,34,34,0.9);   margin-top:50px;  ">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class=" col-xs-12 col-md-6">
+                        <img style="width:100%" src="http://www.pinckneypubandgrill.com/wp-content/uploads/2013/02/Beer-Slide-Background.jpg" />
+                    </div>
+                    <div class=" col-xs-12 col-md-6">
+                        <h1 style="text-align:center">@item.Title </h1>
+                        <p style="overflow-x: auto; height: 170px;">@item.RecipeDescription</p>
+                        <div style="text-align:center">
+                            <a style="width:60%" href="/Recipe/Details/@item.Id" class="btn btn-primary">View Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (Model.Count() == 0)
+    {
+        <div class="content " style="background-color :rgba(34,34,34,0.9);   margin-top:50px; padding:50px; text-align:center;">
+            <h1>
+                Sorry no results
+            </h1>
+          <img style="max-width:100%; max-height:500px" src="http://cdn.shopify.com/s/files/1/0260/3095/products/Decal_55.png?v=1377461268" />
+        </div>
+    }
+
+
+
+
+
+
+
