@@ -17,11 +17,39 @@
                 <img style="width:100%" src="http://www.pinckneypubandgrill.com/wp-content/uploads/2013/02/Beer-Slide-Background.jpg" />
                 <h1 style="text-align:center">Ingredents</h1>
                 <hr />
+                <ul>
+                    @if (Model.ListOfIngredients != null)
+                    {
+                        foreach (string item in Model.ListOfIngredients)
+                        {
+                            <li><h3>@item</h3></li>
+                        }
+                    }
+                  
+                </ul>
             </div>
             <div class="col-xs-12 col-md-6">
                 <h4>@Model.RecipeDescription</h4>
             </div>
         </div>
     </div>
+</div>
+<div class="row content">
+    <a class="col-xs-6" href="/home/recipes">
+        <div class="content" style=" color:black; padding: 30px; background: url(http://images.medicaldaily.com/sites/medicaldaily.com/files/styles/headline/public/2015/07/27/lagers.jpg);   margin-top:50px; text-align:center ">
+            <div class="col-xs-12">
+                <h1>Search For Recipes</h1>
+
+            </div>
+        </div>
+    </a>
+    <a class="col-xs-6" href="/recipe/create">
+        <div class="content" style="color:black;  padding: 30px; background:url(http://thekegtap.com/wp-content/uploads/2015/07/Recipe.jpg);   margin-top:50px; text-align:center ">
+            <div class="col-xs-12">
+                <h1>Create Recipe</h1>
+
+            </div>
+        </div>
+    </a>
 </div>
 

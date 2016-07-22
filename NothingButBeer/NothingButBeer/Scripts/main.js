@@ -1,1 +1,1 @@
-﻿var NothingButBeerApp = angular.module('NothingButBeerApp', []);
+﻿var NothingButBeerApp = angular.module('NothingButBeerApp', ['ngRoute']);

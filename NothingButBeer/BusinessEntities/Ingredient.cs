@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace BusinessEntities
 {
-    public class Recipe
+    public class Ingredient
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string RecipeDescription { get; set; }
-        public List<string> ListOfIngredients { get; set; }
+        public int RecipeId { get; set; }
+        public string IngredientName { get; set; }
     }
 }

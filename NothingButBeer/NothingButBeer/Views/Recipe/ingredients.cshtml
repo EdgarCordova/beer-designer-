@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "ingredients";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container" style=" background-color: rgba(34,34,34,0.9); margin-top: 150px; padding: 50px;" ng-controller="IngredientCtrl">
+    <div class="row" style="margin:0px!important">
+
+        <div class="col-xs-12">
+
+            <div style="padding:0px 30px">
+                <h1 style="text-align:center; ">Ingredients</h1>
+                <hr />
+
+            </div>
+            <br>
+            <div class="checkBoxWrapper">
+                @foreach (var item in @ViewBag.ingredients)
+                {
+                    <div class=" col-xs-12 col-sm-6 col-md-3 checkbox checkbox-info checkbox-circle" style="margin-top:0px">
+                        <input id="@item.IngredientName" ng-click="clickedCheckBox($event, '@item.IngredientName', 0, 1)" type="checkbox" class="styled">
+                        <label for="@item.IngredientName" style="font-size:14px">
+                            @item.IngredientName
+                        </label>
+                    </div>
+                }
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <button style="float:right; margin-top:20px" ng-click="addIngredients()" class="btn btn-primary btn-lg">Create Recipe</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<script>
+    var module = angular.module('NothingButBeerApp', [])
+    module.factory('Ingredientfactory', function ($http) {
+        return {
+            insertUpdateAboutMe: function (listOfIngredient, callback) {
+                var url = "/Recipe/InsertIngredients?id=" + @ViewBag.id;
+
+                $http({ method: 'POST', url: url, data: listOfIngredient, headers: { 'Content-Type': 'application/json' } }).
+                    success(function (data, status, headers, config) {
+                        data = angular.fromJson(data);
+                        callback(data);
+
+                    }).error(function (data, status, headers, config) {
+
+                    });
+            },
+        }
+    });
+
+    module.controller('IngredientCtrl', function ($scope, $http, Ingredientfactory) {
+
+        debugger;
+        $scope.addIngredients = function()
+        {
+            debugger;
+
+            $scope.listOfIngredient = [];
+
+            $.each($('.checkBoxWrapper input:checked'), function (key, value) {
+                $scope.listOfIngredient.push($(this).attr('id'))
+            });
+
+            console.log($scope.listOfIngredient);
+
+            Ingredientfactory.insertUpdateAboutMe($scope.listOfIngredient, function (response) {
+                window.location.href = "/Recipe/Details/"+@ViewBag.id;
+
+            });
+
+
+           
+        }
+
+
+    
+
+    });
+</script>

@@ -4,6 +4,22 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <div ng-controller="BlogAddCtrl">
+    <div class="row content" style=" margin-top: 100px; ">
+        <a class="col-xs-6" href="/home/about">
+            <div class="content" style=" color:black; padding: 30px; background: url(http://images.medicaldaily.com/sites/medicaldaily.com/files/styles/headline/public/2015/07/27/lagers.jpg);   margin-top:50px; text-align:center ">
+                <div class="col-xs-12">
+                    <h1>About Us</h1>
+                </div>
+            </div>
+        </a>
+        <a class="col-xs-6" href="/recipe/create">
+            <div class="content" style="color:black;  padding: 30px; background:url(http://thekegtap.com/wp-content/uploads/2015/07/Recipe.jpg);   margin-top:50px; text-align:center ">
+                <div class="col-xs-12">
+                    <h1>Create Recipe</h1>
+                </div>
+            </div>
+        </a>
+    </div>
     <div class="content recipeWrapper">
         <div class=" form-group" style="display:inline;">
             <div class="input-group">
@@ -12,16 +28,14 @@
             </div>
         </div>
     </div>
-    
     <div ng-include="filter.url">
 
     </div>
-    
 </div>
 <style>
     .recipeWrapper {
     background-color :rgba(34,34,34,0.9); 
-    margin-top:150px; 
+    margin-top:50px; 
     padding:50px; 
 }
 
@@ -29,14 +43,6 @@
 
 
 <script>
-    NothingButBeerApp.factory('blogaddfactory', function ($http) {
-        return {
-            getKey: function () {
-                return "52855327-D1DC-4D";
-            },
-        }
-    });
-
     angular.module('NothingButBeerApp', []).controller('BlogAddCtrl', function ($scope) {
 
         $scope.filter = {
@@ -47,9 +53,5 @@
         $scope.search = function (e) {
             $scope.filter.url = "/Home/RecipeSearchGrid?keyword=" + $scope.filter.keyword + "&r=" + new Date().getTime();
         }
-
-
     });
-
-
 </script>

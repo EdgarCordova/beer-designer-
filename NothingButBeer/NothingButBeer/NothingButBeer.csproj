@@ -233,6 +233,7 @@
     <Content Include="Views\Home\_RecipeSearchGrid.cshtml" />
     <Content Include="Views\Recipe\Details.cshtml" />
     <Content Include="Views\Recipe\Create.cshtml" />
+    <Content Include="Views\Recipe\ingredients.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -12,76 +12,56 @@ using BusinessEntities;
 namespace NothingButBeer.Tests.Controllers
 {
     [TestClass]
-    public class RecipeRepositoryTest
+    public class IngredientRepositoryTest
     {
         [TestMethod]
         public void GetAllBeerRecipes()
         {
-            List<Recipe> recipes = RecipeRepository.GetAllBeerRecipes();
+            List<Ingredient> ingredients = IngredientsRepository.GetAllIngredients();
 
-            Assert.IsTrue(recipes.Count() > 0);
+            Assert.IsTrue(ingredients.Count() > 0);
         }
 
-        [TestMethod]
-        public void GetBeerRecipesByTitle()
-        {
-            Recipe recipe = new Recipe()
-            {
-                Title = "GetBeerRecipesByTitle",
-                RecipeDescription = "In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elitultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            };
 
-            Recipe newRecipe = RecipeRepository.InsertBeerRecipes(recipe);
-
-            string recipeTitle = "GetBeerRecipesByTitle";
-            List<Recipe> recipes = RecipeRepository.GetBeerRecipesByTitle(recipeTitle);
-            RecipeRepository.DeleteBeerRecipeById(newRecipe.Id);
-
-            Assert.IsTrue(recipes.Count() > 0);
-        }
 
         [TestMethod]
-        public void GetBeerRecipesById()
-        {
-            int recipeId = 1;
-            Recipe recipe = RecipeRepository.GetBeerRecipesById(recipeId);
-
-            Assert.IsTrue(recipe != null);
-        }
-
-        [TestMethod]
-        public void InsertBeerRecipe()
+        public void InsertIngredient()
         {
             Recipe recipe = new Recipe()
             {
                 Title = "Unit Test IPA",
                 RecipeDescription = "In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elitultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             };
-
+            string ingredient = "Test Ingredient";
 
             Recipe newRecipe = RecipeRepository.InsertBeerRecipes(recipe);
 
-            Assert.IsTrue(newRecipe.Id > 0);
+            Ingredient item = IngredientsRepository.InsertIngredient(ingredient, newRecipe.Id);
+
+            Assert.IsTrue(item.Id > 0);
         }
 
+
+
         [TestMethod]
-        public void DeleteBeerRecipeById()
+        public void GetAllRecipeIngredientsById()
         {
             Recipe recipe = new Recipe()
             {
-                Title = "test",
-                RecipeDescription = "test description"
+                Title = "Unit Test IPA",
+                RecipeDescription = "In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elitultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit.ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In lacinia est placerat dui venenatis lobortis. Proin non nisl a lorem varius facilisis sodales dignissim felis. Nullam tortor nisl, sodales et gravida non, vehicula sed massa. Vestibulum ligula lacus, rhoncus id lacinia ac, tristique sed massa. Morbi tortor metus, varius sit amet cursus ac, sagittis sodales ex. Praesent ultricies, arcu a aliquet pulvinar, purus metus tincidunt tellus, eu pulvinar nisi augue non augue. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             };
+            string ingredient = "Test Ingredient";
 
             Recipe newRecipe = RecipeRepository.InsertBeerRecipes(recipe);
 
-            RecipeRepository.DeleteBeerRecipeById(newRecipe.Id);
+            Ingredient item = IngredientsRepository.InsertIngredient(ingredient, newRecipe.Id);
 
-            recipe = RecipeRepository.GetBeerRecipesById(newRecipe.Id);
+            List<string> ingredients = IngredientsRepository.GetAllRecipeIngredientsById(newRecipe.Id);
 
-            Assert.IsTrue(recipe.Id == 0);
+
+            Assert.IsTrue(ingredients.Count() > 0);
         }
-
 
     }
 }

@@ -12,22 +12,22 @@
             <fieldset>
 
                 <div class="form-group">
-                    <label class="control-label" for="Title"><h2>Name</h2></label>
+                    <label class="control-label" for="Title"><h2>Recipe's Name</h2></label>
                     <div class="controls">
                         @Html.TextBoxFor(model => model.Title, new { @class = "form-control", @required = "required" })
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="control-label" for="RecipeDescription"><h2>Beer Description</h2></label>
+                    <label class="control-label" for="RecipeDescription"><h2>Recipe's Description</h2></label>
                     <div class="controls">
-                        @Html.TextAreaFor(model => model.RecipeDescription, new { @class = "form-control", @required = "required", @type = "text", value = "0" })
+                        @Html.TextAreaFor(model => model.RecipeDescription, new { @class = "form-control", @required = "required", @type = "text", value = "0", @style = "height:500px" })
                     </div>
                 </div>
                 <div class="form-group">
                     <!-- Button -->
                     <div class="controls">
-                        <button type="submit" class="btn btn-primary">Create Recipe</button>
+                        <button style="float:right; margin-top:20px" type="submit" class="btn btn-success btn-lg">Next</button>
                     </div>
                 </div>
             </fieldset>
